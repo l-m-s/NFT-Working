@@ -1,0 +1,71 @@
+{
+	"id": "d6ac4ba05a41815a39cda3465b8a8e44",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"tests/MyToken_test.sol": {
+				"content": "/* // SPDX-License-Identifier: MIT\n\npragma solidity >=0.7.0 <0.9.0;\nimport \"remix_tests.sol\";\nimport \"../contracts/MyToken.sol\";\n\ncontract MyTokenTest {\n\n    MyToken s;\n    function beforeAll () public {\n        s = new MyToken();\n    }\n\n    function testTokenNameAndSymbol () public {\n        Assert.equal(s.name(), \"MyToken\", \"token name did not match\");\n        Assert.equal(s.symbol(), \"MTK\", \"token symbol did not match\");\n    }\n}\n**/"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"errors": [
+			{
+				"component": "general",
+				"errorCode": "3420",
+				"formattedMessage": "Warning: Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.7;\"\n--> tests/MyToken_test.sol\n\n",
+				"message": "Source file does not specify required compiler version! Consider adding \"pragma solidity ^0.8.7;\"",
+				"severity": "warning",
+				"sourceLocation": {
+					"end": -1,
+					"file": "tests/MyToken_test.sol",
+					"start": -1
+				},
+				"type": "Warning"
+			}
+		],
+		"sources": {
+			"tests/MyToken_test.sol": {
+				"ast": {
+					"absolutePath": "tests/MyToken_test.sol",
+					"exportedSymbols": {},
+					"id": 1,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [],
+					"src": "439:0:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
